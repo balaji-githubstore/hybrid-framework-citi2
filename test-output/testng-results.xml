@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-10-19T17:21:14 IST" name="Default suite" finished-at="2022-10-19T17:23:23 IST" duration-ms="128971">
+    <groups>
+    </groups>
+    <test started-at="2022-10-19T17:21:14 IST" name="Default test" finished-at="2022-10-19T17:23:23 IST" duration-ms="128971">
+      <class name="com.citi.test.LoginTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.citi.test.LoginTest@23c30a20]" started-at="2022-10-19T17:21:14 IST" name="setup" finished-at="2022-10-19T17:22:10 IST" duration-ms="56127" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="invalidCredentialTest()[pri:0, instance:com.citi.test.LoginTest@23c30a20]" started-at="2022-10-19T17:22:10 IST" name="invalidCredentialTest" finished-at="2022-10-19T17:22:29 IST" duration-ms="18640" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidCredentialTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.citi.test.LoginTest@23c30a20]" started-at="2022-10-19T17:22:29 IST" name="teardown" finished-at="2022-10-19T17:22:38 IST" duration-ms="8935" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.citi.test.LoginTest@23c30a20]" started-at="2022-10-19T17:22:38 IST" name="setup" finished-at="2022-10-19T17:23:11 IST" duration-ms="33138" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="validCredentialTest()[pri:0, instance:com.citi.test.LoginTest@23c30a20]" started-at="2022-10-19T17:23:11 IST" name="validCredentialTest" finished-at="2022-10-19T17:23:19 IST" duration-ms="8319" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validCredentialTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.citi.test.LoginTest@23c30a20]" started-at="2022-10-19T17:23:19 IST" name="teardown" finished-at="2022-10-19T17:23:23 IST" duration-ms="3762" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.citi.test.LoginTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
