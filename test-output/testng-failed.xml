@@ -5,6 +5,8 @@
     <classes>
       <class name="com.citi.test.LoginTest">
         <methods>
+          <include name="teardown"/>
+          <include name="setup"/>
           <include name="invalidCredentialTest"/>
         </methods>
       </class> <!-- com.citi.test.LoginTest -->
