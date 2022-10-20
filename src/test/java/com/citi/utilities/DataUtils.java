@@ -10,8 +10,10 @@ public class DataUtils {
 	@DataProvider
 	public Object[][] commonDataProvider(Method method) throws IOException
 	{
+		//give the current @Test method name which is the sheetname 
+		String sheetName=method.getName();
 		
-		Object[][] main= ExcelUtils.getSheetIntoTwoDimensionalArray("test_data/orange_data.xlsx", "invalidCredentialTest");
+		Object[][] main= ExcelUtils.getSheetIntoTwoDimensionalArray("test_data/orange_data.xlsx",sheetName);
 		return main;
 	}
 	

@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="3" passed="2" failed="0" skipped="0">
+<testng-results ignored="1" total="5" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-10-20T15:36:13 IST" name="Default suite" finished-at="2022-10-20T15:36:28 IST" duration-ms="15341">
+  <suite started-at="2022-10-20T17:47:44 IST" name="Default suite" finished-at="2022-10-20T17:49:26 IST" duration-ms="101483">
     <groups>
     </groups>
-    <test started-at="2022-10-20T15:36:13 IST" name="Default test" finished-at="2022-10-20T15:36:28 IST" duration-ms="15341">
+    <test started-at="2022-10-20T17:47:44 IST" name="Default test" finished-at="2022-10-20T17:49:26 IST" duration-ms="101483">
       <class name="com.citi.test.LoginTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.citi.test.LoginTest@71a8adcf]" started-at="2022-10-20T15:36:13 IST" name="setup" finished-at="2022-10-20T15:36:19 IST" duration-ms="6109" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.citi.test.LoginTest@4b0d79fc]" started-at="2022-10-20T17:48:35 IST" name="setup" finished-at="2022-10-20T17:48:45 IST" duration-ms="9111" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="invalidCredentialTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.citi.test.LoginTest@71a8adcf]" started-at="2022-10-20T15:36:19 IST" name="invalidCredentialTest" data-provider="invalidCredentialData" finished-at="2022-10-20T15:36:21 IST" duration-ms="1911" status="PASS">
+        <test-method signature="invalidCredentialTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.citi.test.LoginTest@4b0d79fc]" started-at="2022-10-20T17:48:45 IST" name="invalidCredentialTest" data-provider="commonDataProvider" finished-at="2022-10-20T17:48:49 IST" duration-ms="4316" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[john]]>
+                <![CDATA[saul]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[john123]]>
+                <![CDATA[saul123]]>
               </value>
             </param>
             <param index="2">
@@ -32,15 +32,44 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalidCredentialTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.citi.test.LoginTest@71a8adcf]" started-at="2022-10-20T15:36:21 IST" name="teardown" finished-at="2022-10-20T15:36:21 IST" duration-ms="131" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.citi.test.LoginTest@4b0d79fc]" started-at="2022-10-20T17:48:49 IST" name="teardown" finished-at="2022-10-20T17:48:51 IST" duration-ms="2261" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.citi.test.LoginTest@71a8adcf]" started-at="2022-10-20T15:36:21 IST" name="setup" finished-at="2022-10-20T15:36:26 IST" duration-ms="5010" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.citi.test.LoginTest@4b0d79fc]" started-at="2022-10-20T17:48:51 IST" name="setup" finished-at="2022-10-20T17:48:58 IST" duration-ms="6960" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="invalidCredentialTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.citi.test.LoginTest@71a8adcf]" started-at="2022-10-20T15:36:26 IST" name="invalidCredentialTest" data-provider="invalidCredentialData" finished-at="2022-10-20T15:36:28 IST" duration-ms="2004" status="PASS">
+        <test-method signature="invalidCredentialTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.citi.test.LoginTest@4b0d79fc]" started-at="2022-10-20T17:48:58 IST" name="invalidCredentialTest" data-provider="commonDataProvider" finished-at="2022-10-20T17:49:02 IST" duration-ms="3531" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[kim]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[kim123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Invalid credentials]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidCredentialTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.citi.test.LoginTest@4b0d79fc]" started-at="2022-10-20T17:49:02 IST" name="teardown" finished-at="2022-10-20T17:49:04 IST" duration-ms="2262" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.citi.test.LoginTest@4b0d79fc]" started-at="2022-10-20T17:49:04 IST" name="setup" finished-at="2022-10-20T17:49:10 IST" duration-ms="6461" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="invalidCredentialTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.citi.test.LoginTest@4b0d79fc]" started-at="2022-10-20T17:49:10 IST" name="invalidCredentialTest" data-provider="commonDataProvider" finished-at="2022-10-20T17:49:14 IST" duration-ms="3696" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -61,7 +90,36 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalidCredentialTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.citi.test.LoginTest@71a8adcf]" started-at="2022-10-20T15:36:28 IST" name="teardown" finished-at="2022-10-20T15:36:28 IST" duration-ms="126" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.citi.test.LoginTest@4b0d79fc]" started-at="2022-10-20T17:49:14 IST" name="teardown" finished-at="2022-10-20T17:49:16 IST" duration-ms="1886" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.citi.test.LoginTest@4b0d79fc]" started-at="2022-10-20T17:49:16 IST" name="setup" finished-at="2022-10-20T17:49:21 IST" duration-ms="5307" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="invalidCredentialTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.citi.test.LoginTest@4b0d79fc]" started-at="2022-10-20T17:49:21 IST" name="invalidCredentialTest" data-provider="commonDataProvider" finished-at="2022-10-20T17:49:25 IST" duration-ms="3331" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[mark]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[mark123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Invalid credentials]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidCredentialTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.citi.test.LoginTest@4b0d79fc]" started-at="2022-10-20T17:49:25 IST" name="teardown" finished-at="2022-10-20T17:49:26 IST" duration-ms="1215" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
