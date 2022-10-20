@@ -17,9 +17,15 @@ public class DemoExcelTest {
 		
 		XSSFSheet sheet= book.getSheet("invalidCredentialTest");
 		
-		String value= sheet.getRow(0).getCell(0).getStringCellValue();
 		
-		System.out.println(value);
+		for(int r=1;r<5;r++)
+		{
+			for(int c=0;c<3;c++)
+			{
+				String value= sheet.getRow(r).getCell(c).getStringCellValue();
+				System.out.println(value);
+			}
+		}
 		
 		
 
