@@ -15,11 +15,12 @@ public class ExcelUtils {
 
 		XSSFWorkbook book = new XSSFWorkbook(file);
 		XSSFSheet sheet = book.getSheet(sheetname);
-
+		
 		int rowCount = sheet.getPhysicalNumberOfRows();
 		int cellCount = sheet.getRow(0).getPhysicalNumberOfCells();
-
+		
 		Object[][] main = new Object[rowCount - 1][cellCount];
+		
 		DataFormatter format = new DataFormatter();
 
 		for (int r = 1; r < rowCount; r++) {

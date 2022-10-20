@@ -1,8 +1,21 @@
 package com.citi.utilities;
 
+import java.io.IOException;
+import java.lang.reflect.Method;
+
 import org.testng.annotations.DataProvider;
 
 public class DataUtils {
+	
+	@DataProvider
+	public Object[][] commonDataProvider(Method method) throws IOException
+	{
+		
+		Object[][] main= ExcelUtils.getSheetIntoTwoDimensionalArray("test_data/orange_data.xlsx", "invalidCredentialTest");
+		return main;
+	}
+	
+	
 	
 	@DataProvider
 	public Object[][] invalidCredentialData()
@@ -19,6 +32,8 @@ public class DataUtils {
 		
 		return main;
 	}
+	
+	
 	
 
 }
