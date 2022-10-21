@@ -3,28 +3,36 @@ package com.citi.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class LoginPage {
+import com.citi.base.AutomationKeywords;
+
+public class LoginPage extends AutomationKeywords {
+	
+	private By usernameLocator=By.name("username");
+	private By passwordLocator=By.cssSelector("[name='password']");
+	private By loginLocator=By.xpath("//button[@type='submit']");
+	private By errorLocator=By.xpath("//div[contains(@class,'alert-content')]");
 
 	private WebDriver driver;
 
 	public LoginPage(WebDriver driver) {
+		super(driver);
 		this.driver = driver;
 	}
 
 	public void enterUsername(String username) {
-		driver.findElement(By.name("username")).sendKeys(username);
+		enterTextUsingLocator(usernameLocator, username);
 	}
 
 	public void enterPassword(String password) {
-		driver.findElement(By.cssSelector("[name='password']")).sendKeys(password);
+		enterTextUsingLocator(passwordLocator, password);
 	}
 
 	public void clickOnLogin() {
-		driver.findElement(By.xpath("//button[@type='submit']")).click();
+		clickUsingLocator(loginLocator);
 	}
 
 	public String getInvalidErrorMessage() {
-		return driver.findElement(By.xpath("//div[contains(@class,'alert-content')]")).getText();
+		return driver.findElement(errorLocator).getText();
 	}
 
 }

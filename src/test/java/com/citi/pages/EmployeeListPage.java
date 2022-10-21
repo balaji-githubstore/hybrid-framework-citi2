@@ -3,11 +3,14 @@ package com.citi.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class EmployeeListPage {
+import com.citi.base.AutomationKeywords;
+
+public class EmployeeListPage extends AutomationKeywords {
 
 	private WebDriver driver;
 
 	public EmployeeListPage(WebDriver driver) {
+		super(driver);
 		this.driver = driver;
 	}
 
