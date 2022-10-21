@@ -10,11 +10,11 @@ import org.openqa.selenium.support.ui.FluentWait;
 
 public class AutomationKeywords {
 
-	private WebDriver driver;
+	private WebDriver driver1;
 	private FluentWait<WebDriver> wait;
 
 	public AutomationKeywords(WebDriver driver) {
-		this.driver = driver;
+		this.driver1 = driver;
 
 		wait = new FluentWait<WebDriver>(driver);
 		wait.pollingEvery(Duration.ofSeconds(1));
