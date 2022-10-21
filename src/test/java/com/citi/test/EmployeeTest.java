@@ -6,13 +6,14 @@ import com.citi.base.AutomationWrapper;
 import com.citi.pages.LoginPage;
 
 public class EmployeeTest extends AutomationWrapper {
-	
+
 	@Test
-	public void addEmployeeTest()
+	public void addEmployeeTest() 
 	{
-		LoginPage.enterUsername(driver, "Admin");
-		LoginPage.enterPassword(driver, "admin123");
-		LoginPage.clickOnLogin(driver);
+		LoginPage login = new LoginPage(driver);
+		login.enterUsername("Admin");
+		login.enterPassword("admin123");
+		login.clickOnLogin();
 	}
 
 }

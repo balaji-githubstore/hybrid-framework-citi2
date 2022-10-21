@@ -5,8 +5,14 @@ import org.openqa.selenium.WebDriver;
 
 public class EmployeeListPage {
 
-	public static String getEmployeeInformationHeader(WebDriver driver) {
+	private WebDriver driver;
+
+	public EmployeeListPage(WebDriver driver) {
+		this.driver = driver;
+	}
+
+	public String getEmployeeInformationHeader() {
 		return driver.findElement(By.xpath("//h2")).getText();
 	}
-	
+
 }
