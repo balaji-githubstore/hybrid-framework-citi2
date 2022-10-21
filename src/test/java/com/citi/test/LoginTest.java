@@ -13,7 +13,7 @@ import com.citi.utilities.DataUtils;
 	
 public class LoginTest extends AutomationWrapper {
 
-	@Test(dataProvider = "commonDataProvider",dataProviderClass = DataUtils.class)
+	@Test(dataProvider = "commonDataProvider",dataProviderClass = DataUtils.class,groups = {"login"})
 	public void invalidCredentialTest(String username, String password, String expectedError) {
 		driver.findElement(By.name("username")).sendKeys(username);
 		driver.findElement(By.cssSelector("[name='password']")).sendKeys(password);
@@ -23,7 +23,7 @@ public class LoginTest extends AutomationWrapper {
 		Assert.assertEquals(actualError, expectedError);
 	}
 
-	@Test(dataProvider = "commonDataProvider",dataProviderClass = DataUtils.class)
+	@Test(dataProvider = "commonDataProvider",dataProviderClass = DataUtils.class,groups = {"login","smoke"})
 	public void validCredentialTest(String username,String password,String expectedValue) {
 		driver.findElement(By.name("username")).sendKeys(username);
 		driver.findElement(By.cssSelector("[name='password']")).sendKeys(password);

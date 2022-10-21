@@ -16,7 +16,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class AutomationWrapper {
 	protected WebDriver driver;
 
-	@BeforeMethod
+	@BeforeMethod(alwaysRun = true)
 	@Parameters({ "browser" })
 	public void setup(@Optional("ch") String browserName) {
 
@@ -37,7 +37,7 @@ public class AutomationWrapper {
 		driver.get("https://opensource-demo.orangehrmlive.com/");
 	}
 
-	@AfterMethod
+	@AfterMethod(alwaysRun = true)
 	public void teardown() {
 		driver.quit();
 	}
