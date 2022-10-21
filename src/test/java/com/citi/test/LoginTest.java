@@ -8,7 +8,7 @@ import com.citi.pages.EmployeeListPage;
 import com.citi.pages.LoginPage;
 import com.citi.pages.MainPage;
 import com.citi.utilities.DataUtils;
-	
+	//static page objects
 public class LoginTest extends AutomationWrapper {
 
 	@Test(dataProvider = "commonDataProvider",dataProviderClass = DataUtils.class,groups = {"login"})
