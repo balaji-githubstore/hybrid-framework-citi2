@@ -15,13 +15,13 @@ public class LoginUITest extends AutomationWrapper {
 		Assert.assertEquals(actualTitle, "OrangeHRM");
 	}
 
-//	@Test
-//	public void validatePlaceholderTest()
-//	{
-//		String actualUsernamePlaceholder= driver.findElement(By.name("username")).getAttribute("placeholder");
-//		String actualPasswordPlaceholder= driver.findElement(By.name("password")).getAttribute("placeholder");
-//		
-//		Assert.assertEquals(actualUsernamePlaceholder, "Username");
-//		Assert.assertEquals(actualPasswordPlaceholder, "Password");
-//	}
+	@Test
+	public void validatePlaceholderTest()
+	{
+		String actualUsernamePlaceholder= driver.findElement(By.name("username")).getAttribute("placeholder");
+		String actualPasswordPlaceholder= driver.findElement(By.name("password")).getAttribute("placeholder");
+		
+		Assert.assertEquals(actualUsernamePlaceholder, "Username");
+		Assert.assertEquals(actualPasswordPlaceholder, "Password");
+	}
 }
