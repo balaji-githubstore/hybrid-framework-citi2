@@ -26,7 +26,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class AutomationWrapper {
 	protected WebDriver driver;
-	protected static ExtentReports extent;
+	private static ExtentReports extent;
 	protected static ExtentTest test;
 
 	@BeforeSuite
