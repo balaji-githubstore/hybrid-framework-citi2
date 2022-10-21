@@ -1,38 +1,36 @@
 package com.citi.test;
 
-import java.time.Duration;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.citi.base.AutomationWrapper;
+import com.citi.pages.EmployeeListPage;
+import com.citi.pages.LoginPage;
+import com.citi.pages.MainPage;
 import com.citi.utilities.DataUtils;
 	
 public class LoginTest extends AutomationWrapper {
 
 	@Test(dataProvider = "commonDataProvider",dataProviderClass = DataUtils.class,groups = {"login"})
 	public void invalidCredentialTest(String username, String password, String expectedError) {
-		driver.findElement(By.name("username")).sendKeys(username);
-		driver.findElement(By.cssSelector("[name='password']")).sendKeys(password);
-		driver.findElement(By.xpath("//button[@type='submit']")).click();
+		
+		LoginPage.enterUsername(driver, username);
+		LoginPage.enterPassword(driver, password);
+		LoginPage.clickOnLogin(driver);
 
-		String actualError = driver.findElement(By.xpath("//div[contains(@class,'alert-content')]")).getText();
+		String actualError = LoginPage.getInvalidErrorMessage(driver);
 		Assert.assertEquals(actualError, expectedError);
 	}
 
 	@Test(dataProvider = "commonDataProvider",dataProviderClass = DataUtils.class,groups = {"login","smoke"})
 	public void validCredentialTest(String username,String password,String expectedValue) {
-		driver.findElement(By.name("username")).sendKeys(username);
-		driver.findElement(By.cssSelector("[name='password']")).sendKeys(password);
-		driver.findElement(By.xpath("//button[@type='submit']")).click();
+		LoginPage.enterUsername(driver, username);
+		LoginPage.enterPassword(driver, password);
+		LoginPage.clickOnLogin(driver);
 
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[text()='Admin']")));
+		MainPage.waitForPresenceOfAdminMenu(driver);
 
-		String actualText = driver.findElement(By.xpath("//h5")).getText();
+		String actualText = EmployeeListPage.getEmployeeInformationHeader(driver);
 		Assert.assertEquals(actualText, expectedValue);
 	}
 
